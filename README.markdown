@@ -10,5 +10,5 @@ values.  This can lead to a false sense of security in cases where
 Unicode compliance is required, as encodings that span multiple bytes
 or code units will simply not be exercised at all.
 
-This module deliberately avoids using the @text@ and @bytestring@
+This module deliberately avoids using the `text` and `bytestring`
 packages to avoid pulling in extra dependencies.
