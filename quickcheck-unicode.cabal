@@ -1,5 +1,5 @@
 name:           quickcheck-unicode
-version:        1.0.0.0
+version:        1.0.0.1
 homepage:       https://github.com/bos/quickcheck-unicode
 bug-reports:    https://github.com/bos/quickcheck-unicode/issues
 synopsis:       Generator and shrink functions for testing
