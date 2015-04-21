@@ -6,7 +6,7 @@ synopsis:       Generator and shrink functions for testing
                 Unicode-related software.
 description:    Generator and shrink functions for testing
                 Unicode-related software.
-license:        BSD3
+license:        BSD2
 license-file:   LICENSE
 author:         Bryan O'Sullivan <bos@serpentine.com>
 maintainer:     Bryan O'Sullivan <bos@serpentine.com>
