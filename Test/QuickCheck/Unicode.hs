@@ -2,7 +2,7 @@
 
 -- |
 -- Module      : Test.QuickCheck.Unicode
--- Copyright   : (c) 2014 Bryan O'Sullivan
+-- Copyright   : (c) 2014-2017 Bryan O'Sullivan
 -- License     : BSD-style
 -- Maintainer  : bos@serpentine.com
 -- Stability   : stable
