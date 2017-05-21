@@ -28,9 +28,11 @@ module Test.QuickCheck.Unicode
     -- * Generators
     , char
     , string
+    , string1
 
     -- ** Helpers
     , list
+    , list1
 
     -- ** Basic generators
     , planes
@@ -74,11 +76,23 @@ char = chr `fmap` excluding reserved (frequency planes)
 string :: Gen String
 string = list char
 
+-- | Generate a non-empty list of Unicode code points.
+string1 :: Gen String
+string1 = list char
+
 -- | Generate a list of values.
 list :: Gen a -> Gen [a]
-list gen =
+list gen = listN 0 gen
+
+-- | Generate a non-empty list of values.
+list1 :: Gen a -> Gen [a]
+list1 gen = listN 1 gen
+
+-- | Generate a list of at least /n/ values.
+listN :: Int -> Gen a -> Gen [a]
+listN m gen =
   sized $ \n ->
-    do k <- choose (0,n)
+    do k <- choose (m,n)
        vectorOf k gen
 
 -- | Shrink a Unicode code point.
