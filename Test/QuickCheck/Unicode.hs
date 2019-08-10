@@ -78,7 +78,7 @@ string = list char
 
 -- | Generate a non-empty list of Unicode code points.
 string1 :: Gen String
-string1 = list char
+string1 = list1 char
 
 -- | Generate a list of values.
 list :: Gen a -> Gen [a]
