@@ -88,11 +88,11 @@ list gen = listN 0 gen
 list1 :: Gen a -> Gen [a]
 list1 gen = listN 1 gen
 
--- | Generate a list of at least /n/ values.
+-- | Generate a list of at least /m/ values.
 listN :: Int -> Gen a -> Gen [a]
 listN m gen =
   sized $ \n ->
-    do k <- choose (m,n)
+    do k <- choose (m,max m n)
        vectorOf k gen
 
 -- | Shrink a Unicode code point.
